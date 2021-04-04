@@ -1,0 +1,279 @@
+.hero {
+  background-image: linear-gradient(to bottom, $veryLightRed2, $lightRed2);
+  min-height: 41.3125rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-top: 4.25rem;
+  padding-bottom: 10.5rem;
+  color: white;
+  border-bottom-left-radius: 5.5rem;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (min-width: 1000px) {
+    padding-bottom: 12.75rem;
+    padding-top: 5rem;
+  }
+
+  &__wrapper {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__img {
+    left: -56rem;
+    position: absolute;
+    top: -59rem;
+    width: 171rem;
+  }
+  &__logo {
+    margin-right: 5.5rem;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__text {
+    margin-top: 8.4375rem;
+    text-align: center;
+    position: relative;
+
+    @media screen and (min-width: 1000px) {
+      margin-top: 11.4375rem;
+    }
+  }
+  &__title {
+    font-size: 1.9375rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1.6875rem;
+
+    @media screen and (min-width: 38.75rem) {
+      font-size: 3rem;
+    }
+
+    @media screen and (min-width: 62.5rem) {
+      font-size: 3.5rem;
+    }
+  }
+  &__description {
+    font-size: 1.0625rem;
+    font-weight: 300;
+    margin-bottom: 55px;
+
+    @media screen and (min-width: 38.75rem) {
+      font-size: 1.14rem;
+    }
+
+    @media screen and (min-width: 62.5rem) {
+      font-size: 1.3125rem;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .button {
+      padding: 1.0625rem 1.25rem;
+      border-radius: 100px;
+
+      &--filled {
+        background-color: $white;
+        color: $lightRed;
+        margin-right: 1rem;
+
+        &:hover {
+          background-color: $veryLightRed;
+          color: $white;
+        }
+      }
+      &--transparent {
+        background-color: transparent;
+        border: 2px solid $white;
+
+        &:hover {
+          color: $veryLightRed;
+          background-color: $white;
+        }
+      }
+      @media screen and (min-width: 62.5rem) {
+        padding: 1.6875rem 2.3125rem;
+      }
+    }
+  }
+
+  .mobile__menu {
+    background-color: $white;
+    position: relative;
+    overflow: auto;
+    top: -23.25rem;
+    left: 50%;
+    display: none;
+    transform: translateX(-50%);
+    width: 22.3125rem;
+    border-radius: 0.5rem;
+    padding: 2.5rem 1.625rem;
+    text-align: center;
+
+    a {
+      color: $veryDarkBlackBlue;
+      display: block;
+      position: relative;
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    .menu__item {
+      margin-bottom: 2.625rem;
+
+      img {
+        position: absolute;
+        right: 100px;
+        top: 6px;
+      }
+      &:hover {
+        .submenu {
+          max-height: 18.75rem;
+        }
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .submenu {
+      margin-top: 1.625rem;
+      margin-bottom: 1.625rem;
+      background-color: #efeff1;
+      border-radius: 0.5rem;
+      // display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 300ms ease-in-out;
+
+      .submenu__item {
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
+      }
+    }
+
+    hr {
+      border-color: $grayishBlue;
+      opacity: 0.3;
+    }
+    .menu__login {
+      margin-top: 2.3125rem;
+      margin-bottom: 1.75rem;
+    }
+    .menu__button {
+      background: $gradient;
+      padding: 1.1875rem 2.8125rem;
+      color: $white;
+    }
+  }
+
+  .nav {
+    list-style: none;
+    margin: 0;
+    color: white;
+    display: flex;
+    margin-right: auto;
+
+    .dropdown {
+      list-style: none;
+      padding: 0 2.0625rem;
+      position: absolute;
+      background-color: $white;
+      border-radius: 0.5rem;
+      max-height: 0;
+      left: -1rem;
+      top: 2rem;
+      z-index: 3;
+      box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+      transition: max-height 0.3s ease;
+      width: 11.25rem;
+      overflow: hidden;
+
+      .dropdown__item {
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
+
+        a {
+          color: $veryDarkBlackBlue;
+          display: block;
+          position: relative;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .nav-item {
+      margin-right: 2.6875rem;
+      transition: all 300ms ease-in-out;
+      position: relative;
+
+      img {
+        transition: all 300ms ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        img {
+          transform: rotate(180deg);
+        }
+        .dropdown {
+          max-height: 18.75rem;
+        }
+      }
+    }
+    a {
+      color: white;
+    }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .cta-buttons {
+    .button--transparent {
+      margin-right: 2.6875rem;
+    }
+    .button--filled {
+      color: $veryLightRed;
+      background-color: $white;
+      padding: 1.4375rem 3.375rem;
+
+      &:hover {
+        background-color: $veryLightRed;
+        color: $white;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+}
+
+.mobile-active {
+  display: block !important;
+}

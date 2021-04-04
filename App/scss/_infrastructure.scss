@@ -1,0 +1,77 @@
+.infrastructure {
+  background-color: #3a3d5c;
+  background-image: url("../../images/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: -6rem -13.9375rem;
+  background-size: 150%;
+  border-top-right-radius: 5.5rem;
+  background-blend-mode: lighten;
+  border-bottom-left-radius: 5.5rem;
+  color: white;
+  padding-top: 12.9375rem;
+  padding-bottom: 6.25rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  text-align: center;
+  position: relative;
+  height: 37.125rem;
+
+  @media screen and (min-width: 1000px) {
+    background-position: -45rem -68.9375rem;
+    height: 26.875rem;
+    padding-top: 8.125rem;
+  }
+
+  &__title {
+    margin-bottom: 1.875rem;
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.5;
+  }
+  &__wrapper {
+    max-width: 62.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .floating-img {
+      position: absolute;
+      width: 114%;
+      height: 12.5rem;
+      flex: 1;
+      top: -348px;
+      left: -13px;
+      max-width: 353px;
+      transform: translateX(-50%);
+      left: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      flex: 1;
+      text-align: center;
+    }
+    @media screen and (min-width: 1000px) {
+      flex-direction: row;
+      .floating-img {
+        top: -163px;
+        left: 205px;
+        max-width: 51%;
+      }
+      .text {
+        text-align: left;
+        position: absolute;
+        width: 50%;
+        right: 0;
+      }
+    }
+  }
+}

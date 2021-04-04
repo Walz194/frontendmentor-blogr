@@ -1,0 +1,66 @@
+.benefits {
+  padding-top: 5.375rem;
+  padding-bottom: 5.375rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+
+  @media screen and (min-width: 1000px) {
+    height: 56.25rem;
+  }
+  &__wrapper {
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+
+    @media screen and (min-width: 1000px) {
+      position: relative;
+
+      .benefits__features {
+        position: absolute;
+        width: 49%;
+        top: 155px;
+        right: 0;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 31.25rem;
+    margin-bottom: 3.3125rem;
+    img {
+      width: 100%;
+    }
+    .desktop {
+      display: none;
+    }
+    @media screen and (min-width: 1000px) {
+      max-width: none;
+      position: absolute;
+      left: 64px;
+      top: -18px;
+      width: 84%;
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: block;
+      }
+    }
+  }
+  &__feature {
+    text-align: center;
+    margin-bottom: 3.3125rem;
+    @media screen and (min-width: 1000px) {
+      text-align: left;
+    }
+  }
+  &__title {
+    color: $veryDarkBlue;
+  }
+  &__desc {
+    color: #1f3f5b;
+  }
+}
