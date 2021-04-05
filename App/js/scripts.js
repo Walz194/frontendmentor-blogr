@@ -11,6 +11,7 @@ const btnClickHandler = () => {
   } else {
     hamburger.classList.toggle("change");
     hamburger.setAttribute("src", "./images/icon-close.svg");
+    hamburger.setAttribute("alt", "close button");
     mobileMenu.classList.add("mobile-active");
   }
 };
