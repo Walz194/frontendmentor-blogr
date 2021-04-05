@@ -6,11 +6,11 @@ const btnClickHandler = () => {
 
   if (hamburger.classList.contains("change")) {
     hamburger.classList.toggle("change");
-    hamburger.setAttribute("src", "../../images/icon-hamburger.svg");
+    hamburger.setAttribute("src", "./images/icon-hamburger.svg");
     mobileMenu.classList.remove("mobile-active");
   } else {
     hamburger.classList.toggle("change");
-    hamburger.setAttribute("src", "../../images/icon-close.svg");
+    hamburger.setAttribute("src", "./images/icon-close.svg");
     mobileMenu.classList.add("mobile-active");
   }
 };
