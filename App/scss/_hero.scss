@@ -1,23 +1,36 @@
 .hero {
   background-image: linear-gradient(to bottom, $veryLightRed2, $lightRed2);
-  min-height: 41.3125rem;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
-  padding-top: 4.25rem;
-  padding-bottom: 10.5rem;
   color: white;
   border-bottom-left-radius: 5.5rem;
   position: relative;
   overflow: hidden;
+  height: 92vh;
+
+  &__img {
+    left: -34rem;
+    position: absolute;
+    top: -73rem;
+    width: 171rem;
+  }
 
   @media screen and (min-width: 1000px) {
-    padding-bottom: 12.75rem;
-    padding-top: 5rem;
+    min-height: auto;
+    height: 75vh;
+    // padding-bottom: 12.75rem;
+    // padding-top: 5rem;
   }
 
   &__wrapper {
     max-width: 1000px;
-    margin: auto;
+    height: 100%;
+    margin: 0px auto;
+    padding-top: 2rem;
+
+    header {
+      margin-bottom: 9.6rem;
+    }
   }
 
   nav {
@@ -26,12 +39,7 @@
     justify-content: space-between;
     position: relative;
   }
-  &__img {
-    left: -56rem;
-    position: absolute;
-    top: -59rem;
-    width: 171rem;
-  }
+
   &__logo {
     margin-right: 5.5rem;
   }
@@ -44,32 +52,31 @@
     }
   }
   &__text {
-    margin-top: 8.4375rem;
     text-align: center;
     position: relative;
 
     @media screen and (min-width: 1000px) {
-      margin-top: 11.4375rem;
     }
   }
   &__title {
-    font-size: 1.9375rem;
+    font-family: "Overpass", sans-serif;
+    font-size: 2.3375rem;
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 1.6875rem;
 
     @media screen and (min-width: 38.75rem) {
       font-size: 3rem;
+      margin-bottom: 0.9375rem;
     }
 
     @media screen and (min-width: 62.5rem) {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
+      margin-bottom: 0.9375rem;
     }
   }
   &__description {
-    font-size: 1.0625rem;
-    font-weight: 300;
-    margin-bottom: 55px;
+    margin-bottom: 2.5rem;
 
     @media screen and (min-width: 38.75rem) {
       font-size: 1.14rem;
@@ -77,6 +84,7 @@
 
     @media screen and (min-width: 62.5rem) {
       font-size: 1.3125rem;
+      margin-bottom: 3.4375rem;
     }
   }
   &__btn {
@@ -89,6 +97,15 @@
       padding: 1.0625rem 1.25rem;
       border-radius: 100px;
 
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
       &--filled {
         background-color: $white;
         color: $lightRed;
@@ -97,6 +114,9 @@
         &:hover {
           background-color: $veryLightRed;
           color: $white;
+        }
+        &:active {
+          background-color: rgba(255, 82, 93, 0.8);
         }
       }
       &--transparent {
@@ -107,86 +127,16 @@
           color: $veryLightRed;
           background-color: $white;
         }
+        &:active {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
       }
       @media screen and (min-width: 62.5rem) {
-        padding: 1.6875rem 2.3125rem;
+        padding: 1.2875rem 2.2125rem;
       }
     }
-  }
-
-  .mobile__menu {
-    background-color: $white;
-    position: relative;
-    overflow: auto;
-    top: -23.25rem;
-    left: 50%;
-    display: none;
-    transform: translateX(-50%);
-    width: 22.3125rem;
-    border-radius: 0.5rem;
-    padding: 2.5rem 1.625rem;
-    text-align: center;
-
-    a {
-      color: $veryDarkBlackBlue;
-      display: block;
-      position: relative;
-      transition: all 300ms ease-in-out;
-
-      &:hover {
-        font-weight: bold;
-      }
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-    .menu__item {
-      margin-bottom: 2.625rem;
-
-      img {
-        position: absolute;
-        right: 100px;
-        top: 6px;
-      }
-      &:hover {
-        .submenu {
-          max-height: 18.75rem;
-        }
-        img {
-          transform: rotate(180deg);
-        }
-      }
-    }
-    .submenu {
-      margin-top: 1.625rem;
-      margin-bottom: 1.625rem;
-      background-color: #efeff1;
-      border-radius: 0.5rem;
-      // display: none;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 300ms ease-in-out;
-
-      .submenu__item {
-        margin-top: 1.875rem;
-        margin-bottom: 1.875rem;
-      }
-    }
-
-    hr {
-      border-color: $grayishBlue;
-      opacity: 0.3;
-    }
-    .menu__login {
-      margin-top: 2.3125rem;
-      margin-bottom: 1.75rem;
-    }
-    .menu__button {
-      background: $gradient;
-      padding: 1.1875rem 2.8125rem;
-      color: $white;
+    @media screen and (min-width: 62.5rem) {
+      margin-top: -1.5625rem;
     }
   }
 
@@ -256,16 +206,48 @@
   }
   .cta-buttons {
     .button--transparent {
-      margin-right: 2.6875rem;
+      margin-right: 0.7875rem;
+      padding: 0.9875rem 2.8125rem;
+      position: relative;
+      &::after {
+        content: "";
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 30px;
+        z-index: 0;
+      }
+
+      &:hover {
+        color: $veryDarkBlackBlue;
+      }
+      &:hover::after {
+        background-color: white;
+        animation-name: btnAnimate;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
     }
     .button--filled {
       color: $veryLightRed;
       background-color: $white;
-      padding: 1.4375rem 3.375rem;
-
-      &:hover {
+      padding: 0.9875rem 2.8125rem;
+      &:hover,
+      &:active {
         background-color: $veryLightRed;
         color: $white;
+      }
+      &:hover {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+      }
+      &:active {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-1px);
       }
     }
     @media screen and (max-width: 1000px) {
@@ -276,4 +258,98 @@
 
 .mobile-active {
   display: block !important;
+}
+
+@keyframes btnAnimate {
+  0% {
+    opacity: 1;
+    color: $white;
+  }
+
+  80% {
+    transform: scaleX(1.3) scaleY(1.1);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.mobile__menu {
+  background-color: $white;
+  position: absolute;
+  overflow: auto;
+  top: 5.75rem;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  width: 22.3125rem;
+  border-radius: 0.5rem;
+  padding: 2.5rem 1.625rem;
+  text-align: center;
+  z-index: 3;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: $veryDarkBlackBlue;
+    display: block;
+    position: relative;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .menu__item {
+    margin-bottom: 2.625rem;
+
+    img {
+      position: absolute;
+      right: 100px;
+      top: 6px;
+    }
+    &:hover {
+      .submenu {
+        max-height: 18.75rem;
+      }
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .submenu {
+    margin-top: 1.625rem;
+    margin-bottom: 1.625rem;
+    background-color: #efeff1;
+    border-radius: 0.5rem;
+    // display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in-out;
+
+    .submenu__item {
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  hr {
+    border-color: $grayishBlue;
+    opacity: 0.3;
+  }
+  .menu__login {
+    margin-top: 2.3125rem;
+    margin-bottom: 1.75rem;
+  }
+  .menu__button {
+    background: $gradient;
+    padding: 1.1875rem 2.8125rem;
+    color: $white;
+  }
 }

@@ -1,6 +1,6 @@
 .future {
   background-color: white;
-  padding-top: 7.4375rem;
+  padding-top: 7.1375rem;
   padding-bottom: 15.75rem;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
@@ -13,8 +13,9 @@
     margin: auto;
   }
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.8625rem;
     color: $veryDarkBlue;
+    font-family: "Overpass", sans-serif;
   }
   &__wrapper > &__title {
     margin-bottom: 2.8125rem;
@@ -48,10 +49,8 @@
       }
     }
     .future__desc {
-      line-height: 1.6;
       color: $veryDarkGrayishBlue;
       font-weight: 300;
-      font-size: 0.9375rem;
     }
     @media screen and (min-width: 560px) {
       width: 110%;
@@ -68,10 +67,7 @@
       top: 158px;
       left: 0;
     }
-    .future__desc {
-      font-size: 1.1875rem;
-      line-height: 1.3;
-    }
+
     .future__img {
       position: absolute;
       top: 0;

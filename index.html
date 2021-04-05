@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
 
     <title>Frontend Mentor | [Blogr]</title>
@@ -29,17 +33,21 @@
   <body>
     <!-- Hero Section -->
     <div class="hero">
+      <img
+        class="hero__img"
+        src="./images/bg-pattern-intro.svg"
+        alt="hero background"
+      />
       <div class="hero__wrapper">
         <!-- Header Containing The Nav -->
         <header>
-          <img class="hero__img" src="./images/bg-pattern-intro.svg" />
           <nav>
             <div class="hero__logo">
-              <a href=""><img src="./images/logo.svg" alt="Blogr" /></a>
+              <a href=""><img src="./images/logo.svg" alt="Blogr logo" /></a>
             </div>
 
             <a href="#" class="hero__menu show-on-mobile">
-              <img src="./images/icon-hamburger.svg" alt="" />
+              <img src="./images/icon-hamburger.svg" alt="hamburger-icon" />
             </a>
 
             <ul class="nav">
@@ -47,7 +55,7 @@
               <li class="nav-item">
                 <a href="#"
                   >Product
-                  <img src="./images/icon-arrow-light.svg" />
+                  <img src="./images/icon-arrow-light.svg" alt="arrow" />
                 </a>
                 <ul class="dropdown">
                   <li class="dropdown__item"><a href="#">Overview</a></li>
@@ -62,7 +70,7 @@
               <li class="nav-item">
                 <a href="#"
                   >Company
-                  <img src="./images/icon-arrow-light.svg" />
+                  <img src="./images/icon-arrow-light.svg" alt="arrow" />
                 </a>
                 <ul class="dropdown">
                   <li class="dropdown__item"><a href="#">About</a></li>
@@ -75,7 +83,7 @@
               <!-- Menu Item 3 -->
               <li class="nav-item">
                 <a href="#"
-                  >Connect <img src="./images/icon-arrow-light.svg"
+                  >Connect <img src="./images/icon-arrow-light.svg" alt="arrow"
                 /></a>
                 <ul class="dropdown">
                   <li class="dropdown__item"><a href="#">Contact</a></li>
@@ -90,70 +98,72 @@
             </div>
           </nav>
         </header>
-        <!-- Texts Description -->
-        <div class="hero__text">
-          <h1 class="hero__title">A modern publishing platform</h1>
-          <p class="hero__description">
-            Grow your audience and build your online brand
-          </p>
-        </div>
-        <!-- CTA Buttons -->
-        <div class="hero__btn">
-          <a href="#" class="button button--filled"> Start for Free </a>
-          <a href="#" class="button button--transparent">Learn More</a>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile__menu">
-          <ul class="menu__items">
-            <!-- Menu Item 1 -->
-            <li class="menu__item product">
-              <a href="#"
-                >Product <img src="./images/icon-arrow-dark.svg" alt=""
-              /></a>
-              <ul class="submenu product-menu">
-                <li class="submenu__item"><a href="#">Overview</a></li>
-                <li class="submenu__item"><a href="#">Pricing</a></li>
-                <li class="submenu__item"><a href="#">Marketplace</a></li>
-                <li class="submenu__item"><a href="#">Features</a></li>
-                <li class="submenu__item"><a href="#">Integrations</a></li>
-              </ul>
-            </li>
-
-            <!-- Menu Item 2 -->
-            <li class="menu__item company">
-              <a href="#"
-                >Company
-                <img src="./images/icon-arrow-dark.svg" alt="" />
-              </a>
-              <ul class="submenu company-menu">
-                <li class="submenu__item"><a href="#">About</a></li>
-                <li class="submenu__item"><a href="#">Team</a></li>
-                <li class="submenu__item"><a href="#">Blog</a></li>
-                <li class="submenu__item"><a href="#">Career</a></li>
-              </ul>
-            </li>
-
-            <!-- Menu Item 3 -->
-            <li class="menu__item connect">
-              <a href="#"
-                >Connect <img src="./images/icon-arrow-dark.svg" alt=""
-              /></a>
-              <ul class="submenu connect-menu">
-                <li class="submenu__item"><a href="#">Contact</a></li>
-                <li class="submenu__item"><a href="#">Newsletter</a></li>
-                <li class="submenu__item"><a href="#">LinkedIn</a></li>
-              </ul>
-            </li>
-          </ul>
-          <hr />
-          <div class="menu__login">
-            <a href="#">Login</a>
+        <div class="primary-content">
+          <!-- Texts Description -->
+          <div class="hero__text">
+            <h1 class="hero__title">A modern publishing platform</h1>
+            <p class="hero__description">
+              Grow your audience and build your online brand
+            </p>
           </div>
-          <a href="#" class="button menu__button">Sign Up</a>
+          <!-- CTA Buttons -->
+          <div class="hero__btn">
+            <a href="#" class="button button--filled"> Start for Free </a>
+            <a href="#" class="button button--transparent">Learn More</a>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Mobile Menu -->
+    <div class="mobile__menu">
+      <ul class="menu__items">
+        <!-- Menu Item 1 -->
+        <li class="menu__item product">
+          <a href="#"
+            >Product <img src="./images/icon-arrow-dark.svg" alt="arrow"
+          /></a>
+          <ul class="submenu product-menu">
+            <li class="submenu__item"><a href="#">Overview</a></li>
+            <li class="submenu__item"><a href="#">Pricing</a></li>
+            <li class="submenu__item"><a href="#">Marketplace</a></li>
+            <li class="submenu__item"><a href="#">Features</a></li>
+            <li class="submenu__item"><a href="#">Integrations</a></li>
+          </ul>
+        </li>
+
+        <!-- Menu Item 2 -->
+        <li class="menu__item company">
+          <a href="#"
+            >Company
+            <img src="./images/icon-arrow-dark.svg" alt="arrow" />
+          </a>
+          <ul class="submenu company-menu">
+            <li class="submenu__item"><a href="#">About</a></li>
+            <li class="submenu__item"><a href="#">Team</a></li>
+            <li class="submenu__item"><a href="#">Blog</a></li>
+            <li class="submenu__item"><a href="#">Career</a></li>
+          </ul>
+        </li>
+
+        <!-- Menu Item 3 -->
+        <li class="menu__item connect">
+          <a href="#"
+            >Connect <img src="./images/icon-arrow-dark.svg" alt="arrow"
+          /></a>
+          <ul class="submenu connect-menu">
+            <li class="submenu__item"><a href="#">Contact</a></li>
+            <li class="submenu__item"><a href="#">Newsletter</a></li>
+            <li class="submenu__item"><a href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+      </ul>
+      <hr />
+      <div class="menu__login">
+        <a href="#">Login</a>
+      </div>
+      <a href="#" class="button menu__button">Sign Up</a>
+    </div>
+
     <!-- Future Section -->
     <section class="future">
       <div class="future__wrapper">
@@ -187,7 +197,10 @@
     <section class="infrastructure">
       <div class="infrastructure__wrapper">
         <div class="floating-img">
-          <img src="./images/illustration-phones.svg" alt="" />
+          <img
+            src="./images/illustration-phones.svg"
+            alt="phone illustration"
+          />
         </div>
         <div class="text">
           <h2 class="infrastructure__title">State of the Art Infrastructure</h2>
@@ -207,12 +220,12 @@
           <img
             src="./images/illustration-laptop-mobile.svg"
             class="mobile"
-            alt=""
+            alt="laptop illustration"
           />
           <img
             src="./images/illustration-laptop-desktop.svg"
             class="desktop"
-            alt=""
+            alt="laptop illustration"
           />
         </div>
         <div class="benefits__features">
@@ -242,7 +255,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__logo">
-          <img src="./images/logo.svg" alt="" />
+          <img src="./images/logo.svg" alt="logo" />
         </div>
         <div class="footer__links">
           <h2 class="footer__links--title">Product</h2>

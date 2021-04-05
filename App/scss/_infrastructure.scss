@@ -23,16 +23,15 @@
   }
 
   &__title {
+    font-family: "Overpass", sans-serif;
     margin-bottom: 1.875rem;
     font-size: 2.25rem;
     font-weight: 500;
   }
 
-  &__desc {
-    font-weight: 300;
-    font-size: 1.0625rem;
-    line-height: 1.5;
-  }
+  // &__desc {
+  //   font-weight: 300;
+  // }
   &__wrapper {
     max-width: 62.5rem;
     margin: auto;
